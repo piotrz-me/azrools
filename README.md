@@ -24,8 +24,13 @@ use alias for bash (or other shell that you are using)
 
 example: 
 
-    alias awsd='docker run -it --rm -v "$(pwd):/aws" -v ~/.aws:/aws/.aws:ro -e AWS_PROFILE=had-dev pzalews/awscli'
+    alias azd='docker run -it --rm -v "$(pwd):/work" -v ~/.azure:/work/.azure  pzalews/awstools'
 
 and next you could use:
 
-    awsd terraform init
+
+    azd az login
+
+    azd az resource list
+
+
